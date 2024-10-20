@@ -10,7 +10,7 @@ def total_salary(path: Path) -> tuple[int, int]:
                 print("У файлі відсутні данні! Перевірте файл!")
                 return (0, 0)
 
-            users_dic: dict = {key: int(value) for key, value in users_list}
+            users_dic: dict = {key: float(value) for key, value in users_list}
             total: float = sum(users_dic.values())
             average: float = total / len(users_dic)
             return total, average
@@ -23,7 +23,7 @@ def total_salary(path: Path) -> tuple[int, int]:
     finally:
         print("Якщо хочете повторити роботу програми, запустіть її заново!")
     
-file_path: Path = Path(Path.cwd(), "task_1_data_4.txt")
+file_path: Path = Path(Path.cwd(), "task_1_data_1.txt")
 
 total, average = total_salary(file_path)
 print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")

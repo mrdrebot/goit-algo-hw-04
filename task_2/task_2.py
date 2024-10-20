@@ -4,7 +4,7 @@ def get_cats_info(path: Path) -> list:
     keys_list: list = ["id", "name", "age"]
     try:
         with open(path, 'r', encoding = 'utf-8') as file:
-            cats_list: list = [str.strip().split(",") for str in file.readlines()]
+            cats_list: list = [string.strip().split(",") for string in file.readlines()]
             print(cats_list)
             
             for cat in cats_list:
@@ -20,7 +20,7 @@ def get_cats_info(path: Path) -> list:
     finally:
         print("Якщо хочете повторити роботу програми, запустіть її заново!")
 
-file_name: str = "task_2_data_3.txt"
+file_name: str = "task_2_data_1.txt"
 
 cats_info: list = get_cats_info(file_name)
 print(cats_info)
